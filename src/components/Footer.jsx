@@ -6,44 +6,89 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-brand">
-          <a href="#home" className="footer-logo">
-            Abdinasir<span>.</span>
-          </a>
+        <div className="footer-top">
+          <div className="footer-cta">
+            <span className="footer-cta-title">
+              Full-stack developer. Designing, building, and shipping products
+              end to end.
+            </span>
 
-          <p>
-            Full-Stack Developer specializing in modern web applications and
-            AI-powered chatbot solutions.
-          </p>
-        </div>
+            <ul className="footer-nav-list">
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#skills">Skills</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
+              <li>
+                <a href="#experience">Experience</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
 
-        <div className="footer-socials">
-          <a
-            href="https://www.linkedin.com/in/abdinasir-osman-dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            LinkedIn
-          </a>
+            <a href="#contact" className="btn btn-primary footer-cta-btn">
+              Get in touch
+            </a>
+          </div>
 
-          <a href="mailto:aj07256768@gmail.com" aria-label="Email">
-            Email
-          </a>
+          <div className="footer-brand">
+            <a
+              href="#home"
+              className="footer-monogram"
+              aria-label="Back to top"
+            >
+              AO
+            </a>
 
-          <a
-            href="https://wa.me/254722242664"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-          >
-            WhatsApp
-          </a>
+            <span className="footer-status">
+              <span className="pulsing-dot"></span>
+              Open to new opportunities
+            </span>
+
+            <div className="footer-socials">
+              <a
+                href="https://github.com/aj-devworks"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+                className="footer-social-link"
+              >
+                Gh
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/abdinasir-osman-dev/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="footer-social-link"
+              >
+                In
+              </a>
+
+              <a
+                href="https://x.com/4jworks"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Twitter / X"
+                className="footer-social-link"
+              >
+                X
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© {currentYear} Abdinasir Osman. All rights reserved.</p>
-
+          <span>© {currentYear} Abdinasir Osman. Built with React.</span>
           <a href="#home" className="back-to-top">
             Back to top ↑
           </a>
