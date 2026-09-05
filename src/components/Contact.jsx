@@ -2,11 +2,33 @@ import React, { useState } from "react";
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
+  const [copyFailed, setCopyFailed] = useState(false);
+  const email = "aj07256768@gmail.com";
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText("aj07256768@gmail.com");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+  const handleCopyEmail = async () => {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        // Fallback for browsers/contexts without the async Clipboard API
+        const textarea = document.createElement("textarea");
+        textarea.value = email;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        const ok = document.execCommand("copy");
+        document.body.removeChild(textarea);
+        if (!ok) throw new Error("execCommand copy failed");
+      }
+      setCopied(true);
+      setCopyFailed(false);
+      setTimeout(() => setCopied(false), 2500);
+    } catch (err) {
+      setCopyFailed(true);
+      setTimeout(() => setCopyFailed(false), 2500);
+    }
   };
 
   return (
@@ -34,7 +56,7 @@ const Contact = () => {
               Direct inbox for project inquiries and full-time opportunities.
             </p>
             <div className="hub-actions">
-              <a href="mailto:aj07256768@gmail.com" className="btn btn-primary">
+              <a href={`mailto:${email}`} className="btn btn-primary">
                 Send Email
               </a>
               <button
@@ -42,8 +64,18 @@ const Contact = () => {
                 onClick={handleCopyEmail}
                 className="btn btn-outline"
               >
-                {copied ? "✓ Copied!" : "📋 Copy Address"}
+                {copied
+                  ? "✓ Copied!"
+                  : copyFailed
+                    ? "Couldn't copy — select manually"
+                    : "📋 Copy Address"}
               </button>
+              <span className="sr-only" role="status" aria-live="polite">
+                {copied ? "Email address copied to clipboard" : ""}
+                {copyFailed
+                  ? "Copy failed, please copy the address manually"
+                  : ""}
+              </span>
             </div>
           </div>
 
