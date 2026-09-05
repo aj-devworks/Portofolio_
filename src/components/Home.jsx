@@ -31,7 +31,6 @@ const Home = () => {
           >
             Gh
           </a>
-
           <a
             href="https://www.linkedin.com/in/abdinasir-osman-dev/"
             target="_blank"
@@ -40,7 +39,6 @@ const Home = () => {
           >
             In
           </a>
-
           <a
             href="https://twitter.com"
             target="_blank"
@@ -50,10 +48,6 @@ const Home = () => {
             X
           </a>
         </div>
-      </div>
-
-      <div className="home-image-wrapper">
-        <img src="/profile-photo.jpg" alt="Abdinasir Osman" />
       </div>
     </section>
   );
