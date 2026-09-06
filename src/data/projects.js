@@ -20,13 +20,13 @@ export const projects = [
     image: "/report.jpeg", // Path to image inside public/
   },
   {
-    id: 2,
+    id: 3,
     title: "Azam Homes",
     description:
-      "A full-stack recipe sharing platform where users can post recipes, browse what others have shared, save favorites, and leave reviews.",
+      "A role-based real estate listings platform built with React and flask. Managers post available spaces; admins review and approve them before they appear publicly.",
     tags: ["React", "CSS Modules", "Context API"],
     github: "https://github.com/aj-devworks/Azam_homes.git",
     demo: "https://azam-homes.vercel.app/",
-    image: "/report.jpeg", // Path to image inside public/
+    image: "/azam_home.jpeg", // Path to image inside public/
   },
 ];

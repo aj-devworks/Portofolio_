@@ -303,6 +303,10 @@ section {
   margin-bottom: 1.25rem;
 }
 
+.home-status {
+  margin-bottom: 1.5rem;
+}
+
 .description {
   max-width: 600px;
   color: var(--text-muted);
@@ -611,7 +615,10 @@ section {
 
 .project-links .btn {
   flex: 1;
-  min-width: 130px;
+  min-width: 0;
+  padding: 0.7rem 1rem;
+  font-size: 0.92rem;
+  white-space: nowrap;
 }
 
 /* ===================================================

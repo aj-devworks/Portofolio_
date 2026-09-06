@@ -7,6 +7,12 @@ const Home = () => {
         <span className="greeting">Hi there, I'm</span>
         <h1 className="name">Abdinasir Osman</h1>
         <h2 className="title">Full-Stack Developer & AI Chatbot Specialist</h2>
+
+        <span className="footer-status home-status">
+          <span className="pulsing-dot"></span>
+          Open to new opportunities
+        </span>
+
         <p className="description">
           I build modern, high-performance web applications and intelligent AI
           chatbot solutions. Focused on crafting clean code, smart integrations,
