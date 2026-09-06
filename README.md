@@ -32,5 +32,7 @@ Personal developer portfolio showcasing my skills, projects, and experience in *
 ## 📬 Contact
 
 GitHub: https://github.com/aj-devworks
+
 LinkedIn:https://www.linkedin.com/in/abdinasir-osman-dev/
+
 WhatsApp:https://wa.me/254722242664
