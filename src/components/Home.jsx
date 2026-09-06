@@ -49,6 +49,12 @@ const Home = () => {
           </a>
         </div>
       </div>
+
+      <div className="home-image-wrapper">
+        <div className="home-image-frame">
+          <img src="/homepage.jpeg" alt="Abdinasir Osman" />
+        </div>
+      </div>
     </section>
   );
 };

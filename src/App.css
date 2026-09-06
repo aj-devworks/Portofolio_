@@ -115,6 +115,11 @@ section {
   border: 2px solid transparent;
 }
 
+.btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
 .btn-primary {
   background: var(--primary-gradient);
   color: #0b0f19;
@@ -122,7 +127,8 @@ section {
   font-weight: 700;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus-visible {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(0, 242, 254, 0.45);
   filter: brightness(1.1);
@@ -201,6 +207,7 @@ section {
 }
 
 .nav-link:hover,
+.nav-link:focus-visible,
 .nav-link.active {
   color: var(--primary-color);
   text-shadow: 0 0 8px var(--accent-glow);
@@ -221,7 +228,8 @@ section {
   transition: all 0.25s ease;
 }
 
-.theme-toggle-btn:hover {
+.theme-toggle-btn:hover,
+.theme-toggle-btn:focus-visible {
   background: rgba(0, 242, 254, 0.15);
   border-color: var(--primary-color);
   color: var(--primary-color);
@@ -241,7 +249,8 @@ section {
   transition: all 0.25s ease;
 }
 
-.resume-btn:hover {
+.resume-btn:hover,
+.resume-btn:focus-visible {
   background: var(--primary-gradient);
   color: #0b0f19;
   box-shadow: 0 4px 15px var(--accent-glow);
@@ -332,44 +341,57 @@ section {
   transform: translateY(-3px);
 }
 
-/* Organic Glow Blob Behind Avatar */
+/* Framed Portrait Card with Ambient Glow */
 .home-image-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  width: 450px;
-  height: 380px;
+  align-items: center;
+  width: 420px;
+  height: 500px;
 }
 
 .home-image-wrapper::before {
   content: "";
   position: absolute;
-  top: 10%;
-  left: 10%;
+  top: 8%;
+  left: 8%;
   width: 320px;
-  height: 270px;
+  height: 380px;
   background: var(--primary-gradient);
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  filter: blur(20px);
-  opacity: 0.6;
+  filter: blur(30px);
+  opacity: 0.5;
   z-index: 1;
 }
 
-.home-image-wrapper img {
+.home-image-frame {
   position: relative;
   z-index: 2;
+  width: 380px;
+  height: 460px;
+  border-radius: 28px;
+  padding: 4px;
+  background: var(--primary-gradient);
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.home-image-frame img {
+  display: block;
+  width: 100%;
   height: 100%;
-  max-height: 380px;
-  object-fit: contain;
+  border-radius: 24px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .home-image-wrapper::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
   height: 3px;
   background: var(--primary-gradient);
   border-radius: 2px;
@@ -451,7 +473,8 @@ section {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.skill-card:hover {
+.skill-card:hover,
+.skill-card:focus-within {
   transform: translateY(-6px);
   background: var(--card-bg-hover);
   box-shadow: var(--card-shadow-hover);
@@ -522,7 +545,8 @@ section {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-within {
   transform: translateY(-8px);
   background: var(--card-bg-hover);
   box-shadow: var(--card-shadow-hover);
@@ -636,27 +660,17 @@ section {
   line-height: 1.7;
 }
 
-/* Availability Badge & Pulsing Dot */
-.status-badge-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2.5rem;
+.section-label {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
 }
 
-.status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.55rem 1.25rem;
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  border-radius: 30px;
-  color: #34d399;
-  font-size: 0.88rem;
-  font-weight: 600;
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
-}
-
+/* Pulsing Dot (used in footer status badge) */
 .pulsing-dot {
   width: 9px;
   height: 9px;
@@ -677,226 +691,6 @@ section {
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
   }
 }
-
-/* Contact Grid Layout */
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 2.5rem;
-  align-items: stretch;
-}
-
-.contact-info {
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 2.25rem;
-  border-radius: 18px;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--card-shadow);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.contact-info h3 {
-  color: var(--text-main);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.3px;
-}
-
-.contact-info > p {
-  color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 2rem;
-  font-size: 0.98rem;
-}
-
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* Clickable Contact Item Anchor Link */
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-  padding: 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.02);
-  color: var(--text-main);
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-.contact-item:hover {
-  border-color: var(--primary-color);
-  transform: translateX(6px);
-  background: rgba(0, 242, 254, 0.06);
-  box-shadow: 0 4px 20px var(--accent-glow);
-}
-
-.contact-icon {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border: 1px solid var(--border-glow);
-  background: rgba(0, 242, 254, 0.08);
-  border-radius: 50%;
-  color: var(--primary-color);
-  font-size: 1.1rem;
-  font-weight: 700;
-  box-shadow: 0 0 12px var(--accent-glow);
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
-}
-
-.contact-item:hover .contact-icon {
-  transform: scale(1.1) rotate(5deg);
-  background: var(--primary-gradient);
-  color: #0b0f19;
-}
-
-.contact-item div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.contact-item small {
-  color: var(--text-muted);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.9px;
-  font-weight: 700;
-}
-
-.contact-item span:not(.contact-icon) {
-  color: var(--text-main);
-  font-size: 0.96rem;
-  font-weight: 600;
-}
-
-/* Contact Form Styles */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 2.25rem;
-  border-radius: 18px;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--card-shadow);
-  transition: border-color 0.3s ease;
-}
-
-.contact-form:focus-within {
-  border-color: rgba(0, 242, 254, 0.25);
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-
-.form-group label {
-  color: var(--text-main);
-  font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.85rem 1.1rem;
-  background: rgba(11, 15, 25, 0.65);
-  border: 1.5px solid var(--border-color);
-  border-radius: 12px;
-  color: var(--text-main);
-  font-size: 0.98rem;
-  font-family: inherit;
-  outline: none;
-  transition: all 0.25s ease;
-}
-
-.form-group input {
-  height: 48px;
-}
-
-.form-group textarea {
-  min-height: 140px;
-  resize: vertical;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--text-muted);
-  opacity: 0.7;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 4px var(--accent-glow);
-  background: rgba(11, 15, 25, 0.9);
-}
-
-.contact-form .btn-primary {
-  align-self: flex-start;
-  margin-top: 0.5rem;
-  width: 100%;
-}
-
-/* Status Banners */
-.status-banner {
-  padding: 0.9rem 1.1rem;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.4;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.status-banner.success {
-  background-color: rgba(16, 185, 129, 0.15);
-  color: #34d399;
-  border: 1px solid rgba(16, 185, 129, 0.35);
-}
-
-.status-banner.error {
-  background-color: rgba(239, 68, 68, 0.15);
-  color: #f87171;
-  border: 1px solid rgba(239, 68, 68, 0.35);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Card Action Hub Layout Option */
 .contact-grid-hub {
   display: grid;
@@ -1175,13 +969,18 @@ section {
   }
 
   .home-image-wrapper {
-    width: 320px;
-    height: 300px;
+    width: 300px;
+    height: 380px;
   }
 
   .home-image-wrapper::before {
-    width: 260px;
-    height: 200px;
+    width: 220px;
+    height: 280px;
+  }
+
+  .home-image-frame {
+    width: 270px;
+    height: 340px;
   }
 
   .about-content {
@@ -1191,16 +990,6 @@ section {
 
   .name {
     font-size: 2.8rem;
-  }
-
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .contact-info,
-  .contact-form {
-    padding: 1.75rem;
   }
 }
 
@@ -1225,19 +1014,6 @@ section {
     margin-bottom: 2rem;
   }
 
-  .contact-item {
-    padding: 0.8rem;
-  }
-
-  .contact-item span:not(.contact-icon) {
-    font-size: 0.85rem;
-  }
-
-  .contact-form .btn-primary {
-    width: 100%;
-    text-align: center;
-  }
-
   .contact-grid-hub {
     grid-template-columns: 1fr;
   }
@@ -1248,5 +1024,20 @@ section {
     flex-direction: column;
     gap: 1.25rem;
     text-align: center;
+  }
+}
+
+/* ===================================================
+   Reduced Motion
+   =================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
