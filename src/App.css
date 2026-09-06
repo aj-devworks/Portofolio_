@@ -717,6 +717,7 @@ section {
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
   }
 }
+
 /* Card Action Hub Layout Option */
 .contact-grid-hub {
   display: grid;
@@ -977,7 +978,7 @@ section {
 }
 
 /* ===================================================
-   Responsive Design
+   Responsive Design & Mobile Fixes
    =================================================== */
 
 @media (max-width: 900px) {
@@ -1021,6 +1022,11 @@ section {
 }
 
 @media (max-width: 768px) {
+  /* Navigation Fix: Hides standard row links to prevent horizontal overflow */
+  .nav-menu {
+    display: none;
+  }
+
   .footer-top {
     grid-template-columns: 1fr;
     gap: 2.75rem;
@@ -1047,6 +1053,22 @@ section {
 }
 
 @media (max-width: 480px) {
+  /* Mobile UI Adjustments: Prevents layout overflow on narrow screen sizes */
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
+  .home-image-wrapper {
+    width: 100%;
+    max-width: 280px;
+    height: 340px;
+  }
+
   .footer-bottom {
     flex-direction: column;
     gap: 1.25rem;
