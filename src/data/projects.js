@@ -19,4 +19,14 @@ export const projects = [
     demo: "https://recipe-swap-hub-2026.netlify.app/register",
     image: "/report.jpeg", // Path to image inside public/
   },
+  {
+    id: 2,
+    title: "Azam Homes",
+    description:
+      "A full-stack recipe sharing platform where users can post recipes, browse what others have shared, save favorites, and leave reviews.",
+    tags: ["React", "CSS Modules", "Context API"],
+    github: "https://github.com/aj-devworks/Azam_homes.git",
+    demo: "https://azam-homes.vercel.app/",
+    image: "/report.jpeg", // Path to image inside public/
+  },
 ];
