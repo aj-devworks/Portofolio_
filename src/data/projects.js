@@ -17,6 +17,6 @@ export const projects = [
     tags: ["React", "CSS Modules", "Context API"],
     github: "https://github.com/joelkirapash-lang/Recipe-Swap-Hub.git",
     demo: "https://recipe-swap-hub-2026.netlify.app/register",
-    image: "report.jpeg", // Path to image inside public/
+    image: "/report.jpeg", // Path to image inside public/
   },
 ];

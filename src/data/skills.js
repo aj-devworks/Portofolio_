@@ -4,12 +4,11 @@ export const skills = [
   { name: "Tailwind CSS", category: "Frontend" },
   { name: "Flask", category: "Backend" },
   { name: "PostgreSQL", category: "Database" },
+  { name: "LLM Integration", category: "AI" },
   { name: "Figma", category: "Tools" },
-  { name: "Github", category: "Tools" }, // or category: "Backend"
-
-  { name: "Git ", category: "Tools" },
+  { name: "Github", category: "Tools" },
+  { name: "Git", category: "Tools" },
   { name: "dbdiagram.io", category: "Tools" },
   { name: "Postman", category: "Tools" },
-  { name: "LLM Integration", category: "AI" },
   { name: "VS Code", category: "Tools" },
 ];
