@@ -1,16 +1,34 @@
-# React + Vite
+# Abdinasir Osman — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Full-Stack Developer & AI Chatbot Specialist** building modern web applications and intelligent conversational experiences.
 
-Currently, two official plugins are available:
+## 🚀 About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Personal developer portfolio showcasing my skills, projects, and experience in **full-stack development and AI chatbot solutions**.
 
-## React Compiler
+## 🛠️ Core Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**React.js · JavaScript · Python · Flask · HTML · CSS**
 
-## Expanding the ESLint configuration
+## 🤖 AI Specialization
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- AI Chatbot Development
+- Conversational AI
+- LLM-powered applications
+- AI integration into web applications
+
+## ✨ Features
+
+- Responsive modern design
+- Project showcase
+- Skills & experience
+- AI-powered projects
+- Contact section
+
+## 🌐 Live Demo
+
+[View Portfolio](https://portofolio-nine-beta-33.vercel.app/)
+
+## 📬 Contact
+
+GitHub: https://github.com/aj-devworks
