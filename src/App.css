@@ -714,7 +714,8 @@ section {
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-hub-card:hover {
+.contact-hub-card:hover,
+.contact-hub-card:focus-within {
   transform: translateY(-8px);
   background: var(--card-bg-hover);
   border-color: var(--border-glow);

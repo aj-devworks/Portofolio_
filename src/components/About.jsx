@@ -19,21 +19,24 @@ const About = () => {
 
           <div className="about-text">
             <p>
-              Hello! I'm Abdinasir, a passionate web developer focused on
-              creating clean, responsive, and user-friendly web applications. I
-              enjoy turning complex problems into simple, elegant, and efficient
-              digital experiences.
+              Hey, I'm Abdinasir — a full-stack developer who genuinely enjoys
+              the moment a messy problem turns into a clean, working solution. I
+              build web applications end to end, from database design to the
+              interface someone actually clicks on.
             </p>
             <p>
-              My journey in web development started with a curiosity for how
-              websites function behind the scenes. Today, I build full-stack
-              applications and AI chatbot solutions, continuously learning
-              modern tools to refine my craft.
+              My background is in backend engineering with Flask and RESTful
+              APIs, paired with React on the frontend and PostgreSQL under the
+              hood. I led a team through a full-stack capstone project at
+              Moringa School — architecting the API, running the sprints, and
+              shipping a real, working product with a group of developers
+              relying on me to keep things on track.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or learning about system
-              design.
+              Outside of client work, I'm usually deep in a new tool,
+              contributing to open-source, or reading up on system design — I
+              like understanding not just how to build something, but why it's
+              built that way.
             </p>
           </div>
         </div>
