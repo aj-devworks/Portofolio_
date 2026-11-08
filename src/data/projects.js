@@ -1,6 +1,6 @@
 export const projects = [
   {
-    id: 2,
+    id: 1,
     title: "Oda",
     description:
       "Sell on WhatsApp. Get paid with M-Pesa. Oda is a fullstack web application that turns a WhatsApp seller into a real online store",
@@ -10,7 +10,7 @@ export const projects = [
     image: "/Oda.png", // Path to image inside public/
   },
   {
-    id: 1,
+    id: 2,
     title: "Jiseeti Application",
     description:
       "A civic issue reporting and community engagement platform. Citizens submit reports, upvote them, and track resolution status.",
