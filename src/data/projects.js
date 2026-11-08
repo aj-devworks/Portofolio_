@@ -13,7 +13,7 @@ export const projects = [
     id: 2,
     title: "Oda",
     description:
-      "A full-stack recipe sharing platform where users can post recipes, browse what others have shared, save favorites, and leave reviews.",
+      "Sell on WhatsApp. Get paid with M-Pesa. Oda is a fullstack web application that turns a WhatsApp seller into a real online store",
     tags: ["React", "CSS Modules", "Context API", "Flask", "REST API"],
     github: "https://github.com/aj-devworks/Oda.git",
     demo: "https://oda-theta.vercel.app/",
